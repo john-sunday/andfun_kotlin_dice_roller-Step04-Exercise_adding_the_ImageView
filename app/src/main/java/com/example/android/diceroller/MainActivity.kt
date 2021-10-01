@@ -27,6 +27,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private  lateinit var binding: ActivityMainBinding
+    lateinit var diceImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             rollDice()
         }
+        // Step 5 - lateinit
+        diceImage = findViewById(R.id.diceImage)
     }
 
     private fun rollDice() {
@@ -55,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // TODO (03) Get a reference to the imageView instead
-        val diceImage: ImageView = findViewById(R.id.diceImage)
+        //val diceImage: ImageView = findViewById(R.id.diceImage)
 
         // TODO (05) Make the ImageView show the chosen drawable resource
         diceImage.setImageResource(drawableResource)
